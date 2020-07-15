@@ -48,19 +48,14 @@ export default function App() {
 
           <div className='install-button-container'>
             <p>Click the button below to begin install.</p>
-            <a
-              href={`https://rtsvc.mobilsense.com/api/mobile_config/${id}`}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <a href={`https://rtsvc.mobilsense.com/api/mobile_config/${id}`} target='_blank' rel='noopener noreferrer'>
               <button onClick={() => setDownloadComplete(true)}>Install</button>
             </a>
           </div>
         </>
       ) : (
         <div>
-          Profile successfully downloaded. Please go to your phone Settings to finish the
-          installation.
+          Profile successfully downloaded. Please go to your phone Settings to finish the installation.
           <a href='App-prefs://prefs:root=Settings'>
             <button style={{ marginTop: '2rem' }}>Go To Settings</button>
           </a>

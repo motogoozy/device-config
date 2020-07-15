@@ -48,10 +48,7 @@ export default function IOS13Instructions() {
       <div className='instruction-container increased-margin'>
         <div className='instruction-number-container'>
           <div className='number-circle'>6</div>
-          <p>
-            Click "Install". You will then be warned and asked for confirmation, select "Install"
-            for both prompts
-          </p>
+          <p>Click "Install". You will then be warned and asked for confirmation, select "Install" for both prompts</p>
         </div>
         <img src={step6} alt='step 6' />
       </div>

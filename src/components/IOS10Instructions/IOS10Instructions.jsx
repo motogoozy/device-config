@@ -25,8 +25,8 @@ export default function IOS10Instructions() {
         <div className='instruction-number-container'>
           <div className='number-circle'>3</div>
           <p>
-            In phone Settings, Click "Install". You will then be warned and asked for confirmation.
-            Select "Install" for both prompts
+            In phone Settings, Click "Install". You will then be warned and asked for confirmation. Select "Install" for
+            both prompts
           </p>
         </div>
         <img src={step3} alt='step 3' />
