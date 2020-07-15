@@ -126,4 +126,11 @@
       border: 1px solid rgb(54, 54, 54);
     }
   }
+
+  .profile-downloaded {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

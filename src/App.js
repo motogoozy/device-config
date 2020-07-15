@@ -3,23 +3,24 @@ import './App.scss';
 import IOS13Instructions from './components/IOS13Instructions/IOS13Instructions';
 import IOS10Instructions from './components/IOS10Instructions/IOS10Instructions';
 import { getIOSVersion } from './utils.js';
+import queryString from 'query-string';
 
 const mainLogo = require('./assets/site-logo.gif');
 
 export default function App() {
   const [IOSVersion, setIOSVersion] = useState(13);
   const [downloadComplete, setDownloadComplete] = useState(false);
-  const [id, setId] = useState(null);
+  const [token, setToken] = useState(null);
 
   useEffect(() => {
     const version = getIOSVersion();
-    const id = window.location.href.split('/').pop().split('?')[0];
+    const token = queryString.parse(window.location.search).t;
 
     if (version) {
       setIOSVersion(version);
     }
-    if (id) {
-      setId(id);
+    if (token) {
+      setToken(token);
     }
   }, []);
 
@@ -41,20 +42,24 @@ export default function App() {
 
       {!downloadComplete ? (
         <>
-          <span className='divider-line'></span>
+          <span className='divtokener-line'></span>
 
           {(IOSVersion >= 13 || !IOSVersion) && <IOS13Instructions />}
           {(IOSVersion < 13 || !IOSVersion) && <IOS10Instructions />}
 
           <div className='install-button-container'>
             <p>Click the button below to begin install.</p>
-            <a href={`https://rtsvc.mobilsense.com/api/mobile_config/${id}`} target='_blank' rel='noopener noreferrer'>
+            <a
+              href={`https://rtsvc.mobilsense.com/api/mobile_config/${token}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <button onClick={() => setDownloadComplete(true)}>Install</button>
             </a>
           </div>
         </>
       ) : (
-        <div>
+        <div className='profile-do'>
           Profile successfully downloaded. Please go to your phone Settings to finish the installation.
           <a href='App-prefs://prefs:root=Settings'>
             <button style={{ marginTop: '2rem' }}>Go To Settings</button>
