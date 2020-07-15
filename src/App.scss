@@ -49,9 +49,10 @@
     .instruction-container {
       width: 100%;
       height: auto;
-      min-height: 15rem;
+      min-height: 5rem;
       max-height: 30rem;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
+      // background-color: lightgray;
       display: flex;
       flex-shrink: 0;
       flex-direction: column;
@@ -89,42 +90,40 @@
           text-align: left;
         }
       }
-
-      .instruction-img {
-        width: 80%;
-        height: auto;
-        min-height: 15rem;
-        background-color: green;
-      }
     }
 
-    .install-button-container {
-      width: 100%;
+    img {
+      width: 80%;
       height: auto;
-      max-width: 400px;
-      margin: 2rem 0;
+    }
+  }
+  .install-button-container {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 2rem 0;
 
-      p {
-        color: gray;
-        margin-bottom: 2rem;
-      }
+    p {
+      color: gray;
+      margin-bottom: 2rem;
+    }
+  }
 
-      button {
-        height: 2.5rem;
-        width: 5rem;
-        color: white;
-        background-color: #0b5e84;
-        border: none;
-        border-radius: 6px;
-        outline: none;
+  button {
+    height: auto;
+    width: auto;
+    padding: 0.75rem;
+    color: white;
+    background-color: #0b5e84;
+    border: none;
+    border-radius: 6px;
+    outline: none;
 
-        &:hover,
-        &:active {
-          cursor: pointer;
-          background-color: #073e57;
-          border: 1px solid rgb(54, 54, 54);
-        }
-      }
+    &:hover,
+    &:active {
+      cursor: pointer;
+      background-color: #073e57;
+      border: 1px solid rgb(54, 54, 54);
     }
   }
 }
