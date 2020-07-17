@@ -59,7 +59,7 @@ export default function App() {
           </div>
         </>
       ) : (
-        <div className='profile-do'>
+        <div className='profile-downloaded'>
           Profile successfully downloaded. Please go to your phone Settings to finish the installation.
           <a href='App-prefs://prefs:root=Settings'>
             <button style={{ marginTop: '2rem' }}>Go To Settings</button>
